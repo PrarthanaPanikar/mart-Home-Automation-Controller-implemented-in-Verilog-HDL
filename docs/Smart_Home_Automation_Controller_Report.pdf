@@ -1,0 +1,94 @@
+# Smart Home Automation Controller on FPGA using Verilog HDL
+
+## 1. Abstract
+
+This project implements a Smart Home Automation Controller using Verilog HDL. The system monitors motion, light, temperature, door status, manual override, and security mode inputs to control appliances such as lights, fans, air conditioning, and alarms. The design is verified through simulation using Icarus Verilog and GTKWave and synthesized using Yosys.
+
+## 2. Objective
+
+* Design a smart home controller using Verilog HDL.
+* Implement automation rules for lighting, temperature control, and security.
+* Verify functionality through simulation.
+* Perform logic synthesis using Yosys.
+* Demonstrate FPGA-oriented digital design concepts.
+
+## 3. Problem Statement
+
+Modern homes require intelligent automation for energy efficiency, comfort, and security. This project provides a hardware-based controller capable of making real-time decisions using sensor inputs.
+
+## 4. System Architecture
+
+Sensors → Smart Home Controller → Appliance Outputs
+
+Inputs:
+
+* Motion Sensor
+* Dark Sensor
+* Temperature Sensor
+* Door Sensor
+* Manual Override
+* Security Mode
+
+Outputs:
+
+* Light
+* Fan
+* AC
+* Alarm
+* Energy Save Indicator
+
+## 5. Automation Logic
+
+1. Motion + Dark → Light ON
+2. Temperature High → Fan ON and AC ON
+3. Security Mode + Door Open → Alarm ON
+4. Manual Override → User Priority
+5. No Motion → Energy Saving Mode
+
+## 6. RTL Design
+
+Explain the Verilog module and signal definitions.
+
+## 7. Testbench Design
+
+Explain clock generation, reset logic, and test scenarios.
+
+## 8. Simulation Results
+
+Include GTKWave screenshots and explain observed behavior.
+
+## 9. Synthesis Results
+
+Yosys Statistics:
+
+* 24 Wires
+* 13 Ports
+* 16 Cells
+* 5 D Flip-Flops
+* 2 Logic AND Gates
+* 9 Multiplexers
+
+## 10. RTL Schematic
+
+Include synthesized RTL schematic and explain datapath/control logic.
+
+## 11. Applications
+
+* Smart Homes
+* Building Automation
+* Security Systems
+* Energy Management Systems
+* IoT Control Platforms
+
+## 12. Conclusion
+
+The project successfully demonstrates RTL design, verification, synthesis, and automation control using Verilog HDL. The design is FPGA-ready and can be extended with IoT communication, UART, MQTT, and sensor interfaces.
+
+## 13. Future Scope
+
+* ESP32 Integration
+* MQTT Communication
+* Home Assistant Integration
+* PWM-based Dimming
+* FSM-based Controller
+* Real FPGA Deployment

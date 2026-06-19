@@ -1,0 +1,10 @@
+read_verilog rtl/smart_home_controller.v
+
+hierarchy -top smart_home_controller
+
+proc
+opt
+
+stat
+
+show
